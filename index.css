@@ -1,0 +1,206 @@
+.container {
+  display: grid;
+  padding: 2%;
+  gap: 20px;
+}
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+table tr:not(:last-child) {
+  background-color: #ffff;
+  border-bottom: 1px solid black;
+  padding: 0.35em;
+  align-items: center;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+table span {
+  width: 60%;
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  color: white;
+  border-radius: 20px;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+div.ajoutContainer {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: end;
+}
+
+.ajoutBar {
+  padding: 50px;
+}
+button {
+  background-color: orange;
+  border: none;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.fieldConatiner {
+  display: flex;
+  flex-direction: row;
+  gap: 6em;
+  padding: 20px;
+}
+.fieldConatiner input {
+  padding: 6px 9px;
+  border: 1px solid gray;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.fieldConatiner select {
+  padding: 6px 9px;
+  border: 1px solid gray;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: white;
+}
+.fieldConatiner label {
+  color: gray;
+}
+.fieldConatiner:last-child {
+  justify-content: end;
+}
+.fieldItem {
+  display: flex;
+  flex-direction: column;
+}
+h1.ajoutTitle {
+  padding: 20px;
+}
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 5%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalInnerContainer {
+  display: flex;
+  justify-content: center;
+}
+.modal {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+  max-width: max-content;
+}
+.modalHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+small {
+  color: red;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+  div.ajoutContainer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+  }
+  .fieldConatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  h1.ajoutTitle {
+    padding: 5px;
+    font-size: medium;
+  }
+}
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}

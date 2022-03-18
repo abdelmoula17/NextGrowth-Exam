@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <table>
+          <caption>
+            <img src="./icons/logo.jpeg" alt="">
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Date DE CREATION</th>
+              <th scope="col">ETAT</th>
+              <th scope="col">NOM</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">NOM D'UTILISATEUR</th>
+              <th scope="col">MATRICULE</th>
+              <th scope="col">ACTION</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="ajoutContainer">
+        <div class="ajoutBar">
+          <button id="addUser">Ajouter utilisateur</button>
+        </div>
+      </div>
+      <div class="modalContainer">
+        <div class="modalInnerContainer">
+        <div class="modal" id="modal-one">
+            <div class="modalHeader">
+              <h1 class="ajoutTitle">Ajout d'utilisateur</h1>
+              <button id="close">X</button>
+            </div>
+            <form action="" id="ajoutProduit">
+              <div class="formContainer">
+                <div class="fieldConatiner">
+                  <div class="fieldItem">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="firstName"/>
+                    <small></small>
+                  </div>
+                  <div class="fieldItem">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="lastName"/>
+                    <small></small>
+                  </div>
+                  <div class="fieldItem">
+                    <label for="etat">Etat</label>
+                    <select name="status" id="etat">
+                      <option value="En validation">En validation</option>
+                      <option value="Validé">Validé</option>
+                      <option value="Rejeté">Rejeté</option>
+                    </select>
+                    <small></small>
+                  </div>
+                </div>
+                <div class="fieldConatiner">
+                  <div class="fieldItem">
+                    <label for="nomUtilisateur">Nom d'utilisateur</label>
+                    <input type="text" id="nomUtilisateur" name="userName" />
+                    <small></small>
+                  </div>
+                  <div class="fieldItem">
+                    <label for="dateCreation">Date de creation</label>
+                    <input type="text" id="dateCreation" name="createdDate" placeholder="mm-dd-yyyy"/>
+                    <small></small>
+                  </div>
+                </div>
+                <div class="fieldConatiner">
+                  <div>
+                    <div class="fieldItem">
+                      <label for="matricule">Matricule</label>
+                      <input type="text" id="matricule" name="registrationNumber"/>
+                      <small></small>
+                    </div>
+                  </div>
+                </div>
+                <div class="fieldConatiner">
+                  <div>
+                    <div class="fieldItem">
+                      <button type="submit" id="enregistrer">Enregistrer</buttton>
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
