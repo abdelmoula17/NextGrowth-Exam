@@ -99,7 +99,7 @@ const tableState = (users) => {
       user.id +
       "</td><td data-label='Date de creation'>" +
       new Date(user.createdDate).toLocaleString().split(",")[0] +
-      `</td><td  data-label="Etat"><span style="font-weight:small;background-color:${
+      `</td><td  data-label="Etat"><span style="font-size:small	;background-color:${
         user.status === "En validation"
           ? statusColor.valide
           : user.status === "Validé"
